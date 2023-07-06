@@ -38,7 +38,8 @@
             <Button Style="{StaticResource genericButton}" x:Name="btnAdd" Click="ButtonAddName_Click" Width="100" Height="20" KeyboardNavigation.TabIndex="1">
                 Add Name
             </Button>
-            <DataGrid Height="100" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" SelectionChanged="DataGrid_SelectionChanged"/>
+            <!--<DataGrid Height="100" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" SelectionChanged="DataGrid_SelectionChanged"/>-->
+            <DataGrid x:Name="addressGrid" Height="100" HorizontalAlignment="Center" d:ItemsSource="{addresses}" />
         </StackPanel>
     </Grid>
 </Window>

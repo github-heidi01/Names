@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Names
 {
     /// <summary>
@@ -25,6 +28,8 @@ namespace Names
         {
             InitializeComponent();
             addNameButtonToggle = false;
+            Addresses addresses = new Addresses();
+            addressGrid.SetBinding(ItemsControl.ItemsSourceProperty, new Binding { Source = addresses.addresses });
         }
 
         private void ButtonAddName_Click(object sender, RoutedEventArgs e)
